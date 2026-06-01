@@ -1,1 +1,15 @@
+# SOC Lab Splunk Searches
+
+# All Sysmon Events
+index=win_logs source="*Sysmon*"
+
+# Process Creation
+index=win_logs source="*Sysmon*" "EventID>1<"
+
+# PowerShell Activity
+index=win_logs source="*Sysmon*" powershell
+
+# Failed Logins
+index=win_logs EventCode=4625
+
 
